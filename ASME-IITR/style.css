@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navi {
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  color: aliceblue;
+  overflow: hidden;
+  padding: 1.3rem;
+  position: static;
+}
+
+
+
+.pages a {
+  text-decoration: none;
+  color: aliceblue;
+  margin: 2rem;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 8px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.pages a:hover,
+.pages a.active {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.parallax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("home_img.ebb4c624.png") 40vmax no-repeat;
+  /* background: url("https://source.unsplash.com/1600x900/?computers") no-repeat center center/cover; */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.parallax:before {
+  content: "";
+  z-index: -1;
+  opacity: 0.89;
+  top: 0px;
+  left: 0px;
+}
+
+.parallax img {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  /* width: 100%; */
+  pointer-events: none;
+}
+
+.parallax img#left {
+  position: fixed;
+  transform: translateX(-82px);
+}
+
+.parallax img#right {
+  position: fixed;
+  transform: translateX(1400px);
+}
+
+.parallax img#cloud {
+  position: fixed;
+  transform: translateX(1400px);
+  transform: translateY(300px);
+}
+
+.parallax img#cloud2 {
+  position: fixed;
+  transform: translateX(-82px);
+  transform: translateY(100px);
+  /* width: 30%; */
+  /* left: 1100px; */
+}
+
+.writing {
+  height: 28rem;
+  width: 30rem;
+  text-align: center;
+  /* border: 2px solid red; */
+  background: transparent;
+}
+
+.writing h2 {
+  font-size: 6rem;
+  color: rgb(20, 136, 136);
+
+}
+
+.writing h3 {
+  font-size: 2rem;
+}
+
+.writing p {
+  font-size: 1.5rem;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.hero {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  /* flex-direction: column; */
+}
+
+.card1 {
+  position: relative;
+  text-align: center;
+  height: 20rem;
+  width: 60%;
+  border: 2px solid red;
+  left: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.card2 {
+  position: relative;
+  text-align: center;
+  height: 20rem;
+  width: 30rem;
+  border: 2px solid red;
+  left: 200px;
+}
+
+.card3 {
+  position: relative;
+  text-align: center;
+  height: 20rem;
+  width: 30rem;
+  border: 2px solid red;
+  left: 200px;
+}
+
+.cards {
+  margin: 2rem;
+}
+
+.cards h2 {
+  padding: 2rem;
+  color: blue;
+  font-size: 1.5rem;
+}
+
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 35px;
+  /* height: 35px; */
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 98;
+  background-color: #020912;
+  display: block;
+  padding-top: 120px;
+  transition: 0.4s;
+
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 12px 16px;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  background-color: #1b283a;
+  color: #fff;
+  text-decoration: none;
+}
+
+.mobile-nav a:hover {
+  background-color: #24104f;
+
+}
+
+@media(min-width: 700px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+
+}
+
+@media screen and (max-width:700px) {
+  .pages {
+    display: none;
+  }
+
+  .mobile-nav {
+    width: 100%;
+  }
+  
+  .parallax img {
+    display: none;
+  }
+  
+  .hero{
+    width: 100%;
+  }
+}

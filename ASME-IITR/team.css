@@ -1,0 +1,41 @@
+.main_container{
+    display: flex;
+    flex-direction: column;
+}
+.team{
+    text-align: center;
+}
+.team_img{
+    width: 45rem;
+    height: 25rem;
+    border-radius: 1rem;
+}
+
+.faculty{
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.image{
+    width: 23rem;
+    height: 25rem;
+    display: flex;
+    text-align: center;
+}
+
+.body_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.fig{
+    padding: 2rem;
+    margin: 2rem;
+}
